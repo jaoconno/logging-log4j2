@@ -1473,14 +1473,31 @@
       </plugin>
     </plugins>
   </reporting>
+    <!--
   <distributionManagement>
     <downloadUrl>https://logging.apache.org/log4j/2.x/download.html</downloadUrl>
     <!-- site is only included to make maven-site-plugin stop complaining -->
+    <!--
     <site>
       <id>www.example.com</id>
       <url>scp://www.example.com/www/docs/project/</url>
     </site>
   </distributionManagement>
+  -->
+    
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>snapshot</name>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>release</name>
+            <url>http://localhost:8081/nexus/content/repositories/releases</url>
+        </repository>
+    </distributionManagement>
+    
   <modules>
     <module>log4j-api-java9</module>
     <module>log4j-api</module>
@@ -1707,16 +1724,4 @@
       </properties>
     </profile>
   </profiles>
-      <distributionManagement>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>snapshot</name>
-            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexus-releases</id>
-            <name>release</name>
-            <url>http://localhost:8081/nexus/content/repositories/releases</url>
-        </repository>
-    </distributionManagement>
 </project>
