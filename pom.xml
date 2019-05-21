@@ -1475,7 +1475,7 @@
   </reporting>
     <!--
   <distributionManagement>
-    <downloadUrl>https://logging.apache.org/log4j/2.x/download.html</downloadUrl>
+    <downloadUrl>https://logging.apache.org/log4j/2.x/download.html</downloadUrl>-->
     <!-- site is only included to make maven-site-plugin stop complaining -->
     <!--
     <site>
